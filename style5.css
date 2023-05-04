@@ -1,0 +1,812 @@
+/*
+    DEMO STYLE
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+title {
+	font-family: "mallanna";
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+	font-family: "mallanna";	
+	background-image: url(Images/body-bg5.png);
+	
+}
+
+b {
+	color: rgb(0, 0, 0);
+}
+
+@font-face {
+	font-family: "mallanna";
+	src: url(fonts/mallanna.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+p {
+	font-family: "mallanna";
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.6em;
+	color: #646464;
+	text-align: justify;
+
+}
+
+a {
+	color: #0087FF;
+}
+
+a:hover {
+	color: deepskyblue;
+	text-decoration: none;
+}
+
+a:focus {
+	color: dodgerblue;
+	text-decoration: none;
+	transition: all 0.3s;
+
+}
+
+
+
+.navbar {
+	padding: 15px 10px;
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-btn {
+	box-shadow: none;
+	outline: none !important;
+	border: none;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	border-bottom: thin dashed rgb(124, 124, 124);
+	margin: 40px 0;
+	text-align: center;
+}
+
+.line1 {
+	padding-top: 3%;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-bottom: 2%;
+	background-color: white;
+	margin: auto;
+	width: 75%;
+	
+}
+
+/* main Text Container ఐనటువంటి < div class = line1> యొక్క "విడ్త్" ను Responsive గా మార్చుటకు ప్రారంభం 
+-----------------------------------------------------------------------------------------------------  */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.line1 {
+		width: 95%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.line1 {
+		width: 90%;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.line1 {
+		width: 75%;
+	}
+}
+
+
+
+/* main Text Container ఐనటువంటి < div class = line1> యొక్క మార్జిన్స్ ను Responsive గా మార్చుటకు అంతం 
+-----------------------------------------------------------------------------------------------------  */
+
+
+
+.tab {
+	display: inline-block;
+	margin-left: 800px;
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+	perspective: 1500px;
+}
+
+
+#sidebar {
+	min-width: 400px;
+	max-width: 400px;
+	background: #1b1b1b;
+	color: white;
+	transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+	transform-origin: bottom left;
+}
+
+#sidebar.active {
+	margin-left: -350px;
+	transform: rotateY(100deg);
+}
+
+#sidebar .sidebar-header {
+	
+	border-bottom: 1px solid rgba(255, 255, 255, .05);
+	text-align: center;
+	padding-top: 20px;	
+	background-color: #5d9a41;
+	margin-bottom: 15px;
+}
+
+#sidebar .sidebar-header1 {
+	
+	border-bottom: 1px solid rgba(255, 255, 255, .05);
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	background-color: #5d9a41;
+	margin-bottom: 15px;
+	margin-top: 75px;
+}
+
+
+#sidebar ul.components {
+	padding: 0px 0;
+
+}
+
+#sidebar ul p {
+	color: #fff;
+	padding: 10px;
+}
+
+#sidebar ul li a {
+	padding: 15px 30px;
+	/*-- Top, Right, Bottom, Left ---*/
+	font-size: 1.3em;
+	display: block;
+	color: rgb(230, 230, 230);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidebar ul li a:hover {
+	color: rgb(244, 164, 101);
+	background: #262626;
+	transition: 0.6s;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+	color: rgb(244, 164, 101);
+	border-left: 3px solid rgb(244, 164, 101);
+	background: #262626;
+}
+
+a[data-toggle="collapse"] {
+	position: relative;
+}
+
+.dropdown-toggle::after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+
+
+
+
+ul ul a {
+	font-size: 20px !important;
+	padding-left: 60px !important;
+
+}
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+	width: 100%;
+	padding: 20px;
+	min-height: 100vh;
+	transition: all 0.3s;
+}
+
+#sidebarCollapse {
+	width: 40px;
+	height: 40px;
+	background: #f5f5f5;
+	cursor: pointer;
+}
+
+#sidebarCollapse span {
+	width: 80%;
+	height: 2px;
+	margin: 0 auto;
+	display: block;
+	background: #555;
+	transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+	transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+	transform: rotate(45deg) translate(2px, 2px);
+}
+
+#sidebarCollapse span:nth-of-type(2) {
+	opacity: 0;
+}
+
+#sidebarCollapse span:last-of-type {
+	transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+	transform: none;
+	opacity: 1;
+	margin: 5px auto;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+	#sidebar {
+		margin-left: -400px;
+		transform: rotateY(90deg);
+	}
+
+	#sidebar.active {
+		margin-left: 0;
+		transform: none;
+	}
+
+	#sidebarCollapse span:first-of-type,
+	#sidebarCollapse span:nth-of-type(2),
+	#sidebarCollapse span:last-of-type {
+		transform: none;
+		opacity: 1;
+		margin: 5px auto;
+	}
+
+	#sidebarCollapse.active span {
+		margin: 0 auto;
+	}
+
+	#sidebarCollapse.active span:first-of-type {
+		transform: rotate(45deg) translate(2px, 2px);
+	}
+
+	#sidebarCollapse.active span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	#sidebarCollapse.active span:last-of-type {
+		transform: rotate(-45deg) translate(1px, -1px);
+	}
+
+}
+
+
+
+.example {
+	letter-spacing: 0.5px;
+}
+
+.example1 {
+	line-height: 100%;
+}
+
+.example2 {
+	letter-spacing: 0.75px;
+	line-height: 2.4;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.example {
+		font-size: 17.5px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.example {
+		font-size: 19px;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.example {
+		font-size: 21px;
+	}
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	div.example1 {
+		font-size: 1.5em;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	div.example1 {
+		font-size: 1.75em;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	div.example1 {
+		font-size: 2.25em;
+	}
+}
+
+
+/* సైడ్ హెడ్డింగ్స్ కొరకు మొదలు */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	h2.example1 {
+		font-size: 1.3em;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	h2.example1 {
+		font-size: 1.4em;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	h2.example1 {
+		font-size: 1.5em;
+	}
+}
+
+
+.hr{	
+	width: 100%;	
+	border-color: darkgrey;
+	margin: 0px 0px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+
+h2.example1{
+	padding-top: 35px;
+}
+
+/* సైడ్ హెడ్డింగ్స్ కొరకు తుది */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.example2 {
+		font-size: 17px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.example2 {
+		font-size: 18px;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.example2 {
+		font-size: 20px;
+	}
+}
+
+/* -----------------                    ----------------- */
+@media (max-width: 768px) {
+	.float-right-sm {
+		float: left;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.float-right-lg {
+		float: left;
+	}
+}
+
+@media (max-width: 768px) {
+	.float-right-lg {
+		float: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.float-right-lg {
+		float: right;
+	}
+}
+
+.clearfix {
+	text-align: left;
+}
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+
+
+#computer {
+	border: none;
+	background-color: inherit;
+	padding: 0px;
+	cursor: pointer;
+	color: dodgerblue;
+}
+
+
+/* ---- మోడల్ బాక్స్ కొరకు Style sheet (CSS) మొదలు ----- */
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding-left: 50px;
+	padding-bottom: 3px;
+	padding-right: 50px;
+	background-color: forestgreen;
+	color: white;
+
+}
+
+.modal-body {
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	font-size: 15px;
+	text-indent: 0px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.modal-body {
+		font-size: 13px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.modal-body {
+		font-size: 14px;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.modal-body {
+		font-size: 15px;
+	}
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.modal-header {
+		font-size: 1.5em;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.modal-header {
+		font-size: 1.75em;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.modal-header {
+		font-size: 2.25em;
+	}
+}
+
+
+/* ----- మోడల్ బాక్స్ కొరకు Style sheet (CSS) తుది ------- */
+
+
+.raj {
+
+	font-size: 17px;
+	background-color: #292B38;
+	color: #F1BD3C;
+	padding: 25px 25px 25px 25px;
+	text-indent: 0px;
+}
+
+
+
+
+.data {
+	text-indent: 0px;
+
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.raj {
+		font-size: 17px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.raj {
+		font-size: 18px;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.raj {
+		font-size: 20px;
+	}
+}
+
+
+
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+#inline-block {
+
+	display: inline-block;
+}
+
+
+
+.list {
+
+	font-size: 22px;
+	color: darkorange;
+	margin-left: 35px;
+
+}
+
+
+li {
+	/* top right bottom left */
+	padding: 0px 0px 0px 10px;
+}
+
+/* టిప్ ఫిగర్ కొరకు మొదలు */
+
+#tip li {
+	list-style: none;
+	padding-left: 85px;
+	position: relative;
+	margin-left: -45px
+}
+
+#tip li:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 5px;
+	display: inline-block;
+	height: 65px;
+	width: 65px;
+	background-size: contain;
+	background-image: url(Images/tango-face-tip-help-advice1.png);
+}
+
+/* టిప్ ఫిగర్ కొరకు అంతం */
+
+
+
+.responsive {
+	max-width: 100%;
+	height: auto;
+     
+    
+    
+}
+/* Go to top Button కొరకు ఆరంభం    */
+#Btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 35px;
+  z-index: 99;  
+  border: none;
+  outline: none;  
+  color: white;
+  cursor: pointer;  
+background: none;  
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	#Btn {
+		height: 75px;
+		width: 75px;
+		right: -7px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	#Btn {
+		height: 85px;
+		width: 85px;
+		right: -10px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#Btn {
+		height: 100px;
+		width: 100px;
+		right: 30px;
+	}
+}
+
+/* Go to top Button కొరకు ముగింపు  */
+
+
+
+
+.bullet{
+	list-style-image: url(Images/arrow%20bullet.png);
+	margin-left: 35px;
+}
+

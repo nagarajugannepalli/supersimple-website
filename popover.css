@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "mallanna";
+	src: url(fonts/mallanna.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+
+
+
+.button{
+    
+    font-family: "mallanna";
+    background: none;
+    color: #0087FF;
+    letter-spacing: 0.5px;
+    padding: 0px;
+    border: none;
+}
+
+
+
+
+.button:hover {
+	color: deepskyblue;
+	text-decoration: none;
+    
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.button {
+		font-size: 17.5px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.button {
+		font-size: 19px;
+	}
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.button {
+		font-size: 21px;
+	}
+}
+
+
+.popover {
+     font-family: "mallanna";
+    font-size: 18px;
+    width: 275px;
+     box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.26);
+    text-align: justify;
+   background-color: #dafdf1;
+   
+}
+
